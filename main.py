@@ -3,6 +3,9 @@ from tkinter import *
 from tkinter import ttk
 
 class Application(tk.Frame):
+    # combobox Widgetに関する変数を格納する
+    combobox = None
+
     def __init__(self, master=None):
         # Windowの初期設定を行う。
         super().__init__(master)
@@ -20,11 +23,11 @@ class Application(tk.Frame):
 
         # frame Widget(Frame)を親要素として、combobox Widgetを作成する。
         # values : comboboxを選択すると、表示される様々な選択肢(バイキンマン, 食パンまんとする)の設定
-        combobox = ttk.Combobox(frame, values=('バイキンマン', '食パンまん'))
+        self.combobox = ttk.Combobox(frame, values=('バイキンマン', '食パンまん'))
 
         # frame Widget(Frame)を親要素とした場合に、combobox Widgetをどのように配置するのか?
         # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
-        combobox.pack()
+        self.combobox.pack()
 
 # Tkinter初学者参考 : https://docs.python.org/ja/3/library/tkinter.html#a-simple-hello-world-program
 if __name__ == "__main__":
