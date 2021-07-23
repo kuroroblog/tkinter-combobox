@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter import ttk
 
 class Application(tk.Frame):
-    # combobox Widgetに関する変数を格納する
+    # combobox Widgetに関する情報を変数として格納する
     combobox = None
 
     def __init__(self, master=None):
