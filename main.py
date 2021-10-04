@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter import *
 from tkinter import ttk
 
 class Application(tk.Frame):
@@ -22,7 +21,7 @@ class Application(tk.Frame):
         frame.pack()
 
         # frame Widget(Frame)を親要素として、combobox Widgetを作成する。
-        # values : comboboxを選択すると、表示される様々な選択肢(バイキンマン, 食パンまんとする)の設定
+        # values : 表示される様々な選択肢(バイキンマン, 食パンまん)の設定
         self.combobox = ttk.Combobox(frame, values=('バイキンマン', '食パンまん'))
 
         # frame Widget(Frame)を親要素とした場合に、combobox Widgetをどのように配置するのか?
